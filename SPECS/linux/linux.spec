@@ -3,7 +3,7 @@
 Summary:        Kernel
 Name:           linux
 Version:        4.19.112
-Release:        2%{?kat_build:.kat}%{?dist}
+Release:        3%{?kat_build:.kat}%{?dist}
 License:    	GPLv2
 URL:        	http://www.kernel.org/
 Group:        	System Environment/Kernel
@@ -592,6 +592,8 @@ ln -sf %{name}-%{uname_r}.cfg /boot/photon.cfg
 %endif
 
 %changelog
+*   Sat Apr 04 2020 OidaTiftla <oidatiftla@oidatiftla.de> 4.19.112-3
+-   Enable CONFIG_USB_HIDDEV as module in the kernel, to support Uninterruptable Power Supplies
 *   Sat Apr 04 2020 OidaTiftla <oidatiftla@oidatiftla.de> 4.19.112-2
 -   Update kernel config options
 *   Mon Mar 23 2020 Keerthana K <keerthanak@vmware.com> 4.19.112-1
