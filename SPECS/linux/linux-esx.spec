@@ -3,7 +3,7 @@
 Summary:        Kernel
 Name:           linux-esx
 Version:        4.19.112
-Release:        1%{?kat_build:.kat}%{?dist}
+Release:        2%{?kat_build:.kat}%{?dist}
 License:        GPLv2
 URL:            http://www.kernel.org/
 Group:          System Environment/Kernel
@@ -309,6 +309,8 @@ ln -sf linux-%{uname_r}.cfg /boot/photon.cfg
 /lib/modules/%{uname_r}/extra/hmac_generator.ko.xz
 
 %changelog
+*   Sat Apr 04 2020 OidaTiftla <oidatiftla@oidatiftla.de> 4.19.112-2
+-   Enable CONFIG_USB_HIDDEV as module in the kernel, to support Uninterruptable Power Supplies
 *   Mon Mar 23 2020 Keerthana K <keerthanak@vmware.com> 4.19.112-1
 -   Update to version 4.19.112
 *   Wed Mar 18 2020 Vikash Bansal <bvikas@vmware.com> 4.19.104-4
